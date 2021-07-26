@@ -5,5 +5,9 @@
     <string name="editButton">ویرایش قرار های پیشین</string>
     <string name="tutorialButton">نحوه استفاده از برنامه</string>
     <string name="aboutButton">درباره ما</string>
+    <string name="checkByNameButton">جستجو با نام افراد</string>
+    <string name="checkByIDButton">جستجو با آیدی قرار</string>
+    <string name="checkByTimeButton">جستجو بر اساس تاریخ</string>
+
 
 </resources>

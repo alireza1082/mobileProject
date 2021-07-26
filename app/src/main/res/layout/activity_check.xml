@@ -6,4 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".CheckActivity">
 
+    <Button
+        android:id="@+id/checkByNameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checkByNameButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp"/>
+
+    <Button
+        android:id="@+id/checkByIDButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checkByIDButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkByNameButton"
+        android:layout_marginTop="60dp"/>
+
+    <Button
+        android:id="@+id/checkByTimeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checkByTimeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkByIDButton"
+        android:layout_marginTop="60dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
