@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setCheckButton(View view) {
+        Intent intent = new Intent(this , CheckActivity.class);
+        startActivity(intent);
     }
 
     public void setEditButton(View view) {
