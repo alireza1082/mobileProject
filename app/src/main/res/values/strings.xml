@@ -8,6 +8,7 @@
     <string name="checkByNameButton">جستجو با نام افراد</string>
     <string name="checkByIDButton">جستجو با آیدی قرار</string>
     <string name="checkByTimeButton">جستجو بر اساس تاریخ</string>
-
+    <string name="search">جستجو</string>
+    <string name="emptySearchText">لطفا فیلد جستجو را پر کنید.</string>
 
 </resources>
