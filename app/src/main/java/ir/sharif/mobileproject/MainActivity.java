@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setTutorialButton(View view){
+        Intent intent = new Intent(this , TutorialActivity.class);
+        startActivity(intent);
     }
 
     public void setAboutButton(View view){
