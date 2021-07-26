@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Mobile Project</string>
+    <string name="createButton">ساخت قرار</string>
+    <string name="checkButton">مرور قرار های ثبت شده</string>
+    <string name="editButton">ویرایش قرار های پیشین</string>
+    <string name="tutorialButton">نحوه استفاده از برنامه</string>
+    <string name="aboutButton">درباره ما</string>
+
 </resources>
