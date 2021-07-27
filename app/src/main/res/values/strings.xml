@@ -19,5 +19,7 @@
     <string name="textCost">هزینه کرد</string>
     <string name="textName">نام</string>
     <string name="createDateTitle">ساخت قرار</string>
+    <string name="editTextPersonNameDate">علی</string>
+    <string name="editTextNumberDate">10000</string>
     
 </resources>
