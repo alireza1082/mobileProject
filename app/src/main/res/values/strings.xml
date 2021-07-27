@@ -12,5 +12,9 @@
     <string name="emptySearchText">لطفا فیلد جستجو را پر کنید.</string>
     <string name="aboutUsTextTitle">درباره ما</string>
     <string name="aboutUsText">این گروه 3 نفره متشکل از 3 دانشجوی  دانشگاه شریف جمع شده اند تا این پروژه را به زور به یک جا برسانند و هیچ چیزی مانع کار آنها نمیشود.نفر اول این گروه علیرضا رحمانی است و نفر دوم محمدصالح سعیدی و نفر سوم محمدآذری است که با هم این پروژه را سر هم بندی کرده اند.</string>
-
+    <string name="nameString">لطفا نام مورد نظر را وارد کنید.</string>
+    <string name="IDString">لطفا آیدی قرار مورد نظر را وارد کنید.</string>
+    <string name="timeString">لطفا زمان مورد نظر را وارد کنید.</string>
+    <string name="OPSString">OPS</string>
+    
 </resources>

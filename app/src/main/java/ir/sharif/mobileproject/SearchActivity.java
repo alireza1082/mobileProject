@@ -6,8 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Objects;
 
 public class SearchActivity extends AppCompatActivity {
 
@@ -22,7 +25,19 @@ public class SearchActivity extends AppCompatActivity {
         Button searchButton = findViewById(R.id.searchButton);
         editTextTextPersonName = findViewById(R.id.editTextTextPersonName);
 
-        valueText.setText(getIntent().getStringExtra("value"));
+        switch(Objects.requireNonNull(getIntent().getStringExtra("value"))){
+            case "ID":
+                valueText.setText(R.string.IDString);
+                break;
+            case "time":
+                valueText.setText(R.string.timeString);
+                break;
+            case "name" :
+                valueText.setText(R.string.nameString);
+                break;
+            default:
+                valueText.setText(R.string.OPSString);
+        }
         searchButton.setOnClickListener(this::setSearchButton);
 
     }
