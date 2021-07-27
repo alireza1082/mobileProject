@@ -5,6 +5,15 @@ public class User {
     private String name;
     private int cost;
 
+    public User(int id, String name, int cost) {
+        this.id = id;
+        this.name = name;
+        this.cost = cost;
+    }
+
+    public User() {
+    }
+
     public int getId() {
         return id;
     }
@@ -21,7 +30,7 @@ public class User {
         return cost;
     }
     public void setCost(String cost) {
-        this.cost = cost;
+        this.cost = Integer.parseInt(cost);
     }
 
 }
