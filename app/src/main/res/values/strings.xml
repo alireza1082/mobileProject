@@ -16,5 +16,8 @@
     <string name="IDString">لطفا آیدی قرار مورد نظر را وارد کنید.</string>
     <string name="timeString">لطفا زمان مورد نظر را وارد کنید.</string>
     <string name="OPSString">OPS</string>
+    <string name="textCost">هزینه کرد</string>
+    <string name="textName">نام</string>
+    <string name="createDateTitle">ساخت قرار</string>
     
 </resources>
