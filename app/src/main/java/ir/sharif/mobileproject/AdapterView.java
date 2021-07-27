@@ -20,6 +20,11 @@ import ir.sharif.mobileproject.databinding.ItemViewBinding;
 public class AdapterView extends RecyclerView.Adapter<AdapterView.ViewHolder> {
 
     private static final String TAG = "AdapterView";
+private DataCallback dataCallback;
+
+    public AdapterView(DataCallback dataCallback) {
+        this.dataCallback = dataCallback;
+    }
 
     private List<User> listItem;
 
@@ -32,14 +37,14 @@ public class AdapterView extends RecyclerView.Adapter<AdapterView.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
         ItemViewBinding binding=ItemViewBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false);
-        return new ViewHolder(binding);
+        return new ViewHolder(binding,dataCallback);
     }
 
     @Override
     public void onBindViewHolder(@NonNull @NotNull AdapterView.ViewHolder holder, int position) {
 
-        Log.e(TAG, "onBindViewHolder: "+listItem.size() );
-        holder.nameUser.setText(listItem.get(holder.getAdapterPosition()).getName());
+//        holder.nameUser.setText(listItem.get(holder.getAdapterPosition()).getName());
+        holder.callback.setUser(new User(holder.nameUser.getText().toString(),holder.costUser.getText().toString()));
     }
 
     @Override
@@ -53,10 +58,35 @@ public class AdapterView extends RecyclerView.Adapter<AdapterView.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         EditText nameUser;
+        EditText costUser;
+        private DataCallback callback;
 
-        public ViewHolder(@NonNull @NotNull ItemViewBinding itemView) {
+        public ViewHolder(@NonNull @NotNull ItemViewBinding itemView,DataCallback cBack) {
             super(itemView.getRoot());
+            this.callback=cBack;
             nameUser = itemView.editTextPersonNameDate;
+            costUser = itemView.editTextNumberDate;
+
+//
+
+        }
+
+        public String getNameUser() {
+            return nameUser.getText().toString();
+        }
+
+        public String getCostUser() {
+            return costUser.getText().toString();
         }
     }
+
+    public void okListener(){
+        listItem.size();
+
+    }
+
+    public interface DataCallback{
+        void setUser(User u);
+    }
+
 }

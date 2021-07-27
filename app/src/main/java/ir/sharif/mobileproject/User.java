@@ -3,9 +3,14 @@ package ir.sharif.mobileproject;
 public class User {
     private int id;
     private String name;
-    private int cost;
+    private String cost;
 
-    public User(int id, String name, int cost) {
+    public User(String name, String cost) {
+        this.name = name;
+        this.cost = cost;
+    }
+
+    public User(int id, String name, String cost) {
         this.id = id;
         this.name = name;
         this.cost = cost;
@@ -26,11 +31,11 @@ public class User {
     public void setName(String name) {
         this.name = name;
     }
-    public int getCost() {
+    public String getCost() {
         return cost;
     }
     public void setCost(String cost) {
-        this.cost = Integer.parseInt(cost);
+        this.cost = cost;
     }
 
 }
