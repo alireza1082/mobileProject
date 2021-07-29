@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -23,12 +24,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class DateActivity extends AppCompatActivity implements AdapterView.DataCallback {
+public class DateActivity extends AppCompatActivity {
 
 
     private AdapterView adapterView;
-    private ArrayList<User> userList;
-    private ArrayList<User> users;
+    private List<User> userList;
 
     private FloatingActionButton plusButton;
     private FloatingActionButton minusButton;
@@ -39,14 +39,13 @@ public class DateActivity extends AppCompatActivity implements AdapterView.DataC
         setContentView(R.layout.activity_date);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        userList = new ArrayList<>();
-        users = new ArrayList<>();
+        userList = new ArrayList<User>();
 
         userList.add(new User());
         userList.add(new User());
 
         RecyclerView recyclerView = findViewById(R.id.personsList);
-        adapterView= new AdapterView(this::setUser);
+        adapterView= new AdapterView();
         recyclerView.setAdapter(adapterView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this,RecyclerView.VERTICAL,false));
         adapterView.setListItem(userList);
@@ -57,6 +56,7 @@ public class DateActivity extends AppCompatActivity implements AdapterView.DataC
         plusButton.setOnClickListener(this::setPlusButton);
         minusButton.setOnClickListener(this::setMinusButton);
 
+
     }
 
     @Override
@@ -64,12 +64,12 @@ public class DateActivity extends AppCompatActivity implements AdapterView.DataC
         MenuItem menuItem = menu.add("OK").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-//                adapterView.okListener();
-//
-//                adapterView.notifyDataSetChanged();
-//                startActivity(new Intent());
-//                setUser();
-                Log.e("TAG", "onMenuItemClick: "+users.get(0).getName());
+                userList = adapterView.listItem;
+                if (userList.get(0).getName() == null || userList.get(0).getCost() == null ||
+                        userList.get(1).getName() == null || userList.get(1).getCost() == null) {
+                    Toast.makeText(DateActivity.this, R.string.notComplete, Toast.LENGTH_SHORT).show();
+                    return false;
+                }
                 return false;
             }
         });
@@ -87,11 +87,6 @@ public class DateActivity extends AppCompatActivity implements AdapterView.DataC
             userList.remove(userList.size() - 1);
         adapterView.notifyDataSetChanged();
         return false;
-    }
-
-    @Override
-    public void setUser(User u) {
-        users.add(u);
     }
 
     @Override

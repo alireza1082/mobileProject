@@ -9,6 +9,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.ArrayList;
+
 public class editDateActivity extends AppCompatActivity {
 
     Button edit;
@@ -25,6 +27,9 @@ public class editDateActivity extends AppCompatActivity {
     }
 
     public void setEditButton(View view) {
+        Intent intent = new Intent(this , DateActivity.class);
+        //intent.putStringArrayListExtra(new ArrayList<String>());
+        startActivity(intent);
     }
 
     @Override

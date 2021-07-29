@@ -16,6 +16,15 @@ public class User {
         this.cost = cost;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", cost='" + cost + '\'' +
+                '}';
+    }
+
     public User() {
     }
 

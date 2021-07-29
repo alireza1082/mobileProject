@@ -1,5 +1,7 @@
 package ir.sharif.mobileproject;
 
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,13 +22,11 @@ import ir.sharif.mobileproject.databinding.ItemViewBinding;
 public class AdapterView extends RecyclerView.Adapter<AdapterView.ViewHolder> {
 
     private static final String TAG = "AdapterView";
-    private DataCallback dataCallback;
 
-    public AdapterView(DataCallback dataCallback) {
-        this.dataCallback = dataCallback;
+    public AdapterView() {
     }
 
-    private List<User> listItem;
+    public List<User> listItem;
 
     public void setListItem(List<User> listItem) {
         this.listItem = listItem;
@@ -37,14 +37,43 @@ public class AdapterView extends RecyclerView.Adapter<AdapterView.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
         ItemViewBinding binding=ItemViewBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false);
-        return new ViewHolder(binding,dataCallback);
+        return new ViewHolder(binding);
     }
 
     @Override
     public void onBindViewHolder(@NonNull @NotNull AdapterView.ViewHolder holder, int position) {
 
-//        holder.nameUser.setText(listItem.get(holder.getAdapterPosition()).getName());
-        holder.callback.setUser(new User(holder.nameUser.getText().toString(),holder.costUser.getText().toString()));
+        holder.nameUser.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                listItem.get(holder.getAdapterPosition()).setName(s.toString());
+                Log.e("change" , s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        holder.costUser.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                listItem.get(holder.getAdapterPosition()).setCost(s.toString());
+                Log.e("change" , s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
     }
 
     @Override
@@ -59,11 +88,9 @@ public class AdapterView extends RecyclerView.Adapter<AdapterView.ViewHolder> {
 
         EditText nameUser;
         EditText costUser;
-        private DataCallback callback;
 
-        public ViewHolder(@NonNull @NotNull ItemViewBinding itemView,DataCallback cBack) {
+        public ViewHolder(@NonNull @NotNull ItemViewBinding itemView) {
             super(itemView.getRoot());
-            this.callback=cBack;
             nameUser = itemView.editTextPersonNameDate;
             costUser = itemView.editTextNumberDate;
 
@@ -83,8 +110,8 @@ public class AdapterView extends RecyclerView.Adapter<AdapterView.ViewHolder> {
 
     }
 
-    public interface DataCallback{
-        void setUser(User u);
-    }
+//    public List<User> getListItem{
+//        return listItem;
+//    }
 
 }
