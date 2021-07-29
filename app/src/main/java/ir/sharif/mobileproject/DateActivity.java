@@ -4,18 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewbinding.ViewBinding;
 
-import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -29,6 +22,7 @@ public class DateActivity extends AppCompatActivity {
 
     private AdapterView adapterView;
     private List<User> userList;
+    private List<User> users;
 
     private FloatingActionButton plusButton;
     private FloatingActionButton minusButton;
@@ -64,9 +58,9 @@ public class DateActivity extends AppCompatActivity {
         MenuItem menuItem = menu.add("OK").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                userList = adapterView.listItem;
-                if (userList.get(0).getName() == null || userList.get(0).getCost() == null ||
-                        userList.get(1).getName() == null || userList.get(1).getCost() == null) {
+                users = adapterView.getListItem();
+                if (users.get(0).getName() == null || users.get(0).getCost() == null ||
+                        users.get(1).getName() == null || users.get(1).getCost() == null) {
                     Toast.makeText(DateActivity.this, R.string.notComplete, Toast.LENGTH_SHORT).show();
                     return false;
                 }
@@ -82,11 +76,10 @@ public class DateActivity extends AppCompatActivity {
         adapterView.notifyDataSetChanged();
     }
 
-    public Boolean setMinusButton(View view){
+    public void setMinusButton(View view){
         if (userList.size() > 2)
             userList.remove(userList.size() - 1);
         adapterView.notifyDataSetChanged();
-        return false;
     }
 
     @Override

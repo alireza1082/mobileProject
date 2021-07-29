@@ -57,9 +57,8 @@
                 android:textColor="@color/purple_200"
                 android:fontFamily="@font/ir_sans"
                 android:gravity="center"
-                android:textColorHint="@color/purple_200"
+                android:textColorHint="@color/purple_200_hint"
                 android:inputType="textPersonName"
-                android:alpha="0.4"
                 android:hint="@string/editTextPersonNameDate"/>
 
             <EditText
@@ -68,11 +67,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:textColorHint="@color/purple_200"
+                android:textColorHint="@color/purple_200_hint"
                 android:textColor="@color/purple_200"
                 android:fontFamily="@font/ir_sans"
                 android:gravity="center"
-                android:alpha="0.4"
                 android:inputType="number"
                 android:hint="@string/editTextNumberDate"/>
         </LinearLayout>

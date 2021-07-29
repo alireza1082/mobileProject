@@ -32,6 +32,10 @@ public class AdapterView extends RecyclerView.Adapter<AdapterView.ViewHolder> {
         this.listItem = listItem;
     }
 
+    public List<User> getListItem() {
+        return listItem;
+    }
+
     @NonNull
     @NotNull
     @Override
