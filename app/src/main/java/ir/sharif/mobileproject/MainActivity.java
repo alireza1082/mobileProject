@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setEditButton(View view) {
+        Intent intent = new Intent(this , editDateActivity.class);
+        startActivity(intent);
     }
 
     public void setTutorialButton(View view){
