@@ -24,5 +24,6 @@
     <string name="editDateID">لطفا آیدی قرار را وارد کنید</string>
     <string name="edit">ویرایش</string>
     <string name="notComplete">فیلد ها کامل نیستند</string>
+    <string name="editDate">آیدی قرار را وارد کنید</string>
 
 </resources>
