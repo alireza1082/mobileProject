@@ -37,6 +37,7 @@ public class DateActivity extends AppCompatActivity implements AdapterView.DataC
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_date);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         userList = new ArrayList<>();
         users = new ArrayList<>();
@@ -91,5 +92,12 @@ public class DateActivity extends AppCompatActivity implements AdapterView.DataC
     @Override
     public void setUser(User u) {
         users.add(u);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == android.R.id.home)
+            finish();
+        return super.onOptionsItemSelected(item);
     }
 }
