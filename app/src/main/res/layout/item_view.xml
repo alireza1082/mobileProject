@@ -59,6 +59,7 @@
                 android:gravity="center"
                 android:textColorHint="@color/purple_200"
                 android:inputType="textPersonName"
+                android:alpha="0.4"
                 android:hint="@string/editTextPersonNameDate"/>
 
             <EditText
@@ -71,6 +72,7 @@
                 android:textColor="@color/purple_200"
                 android:fontFamily="@font/ir_sans"
                 android:gravity="center"
+                android:alpha="0.4"
                 android:inputType="number"
                 android:hint="@string/editTextNumberDate"/>
         </LinearLayout>

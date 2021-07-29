@@ -19,8 +19,8 @@
     <string name="textCost">هزینه کرد</string>
     <string name="textName">نام</string>
     <string name="createDateTitle">ساخت قرار</string>
-    <string name="editTextPersonNameDate">علی</string>
-    <string name="editTextNumberDate">10000</string>
+    <string name="editTextPersonNameDate">نام</string>
+    <string name="editTextNumberDate">مبلغ</string>
     <string name="editDateID">لطفا آیدی قرار را وارد کنید</string>
     <string name="edit">ویرایش</string>
     <string name="notComplete">فیلد ها کامل نیستند</string>
