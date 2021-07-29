@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100sp"
         android:text="@string/createButton"
+        android:fontFamily="@font/ir_sans"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,6 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40sp"
+        android:fontFamily="@font/ir_sans"
         android:text="@string/checkButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,6 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40sp"
+        android:fontFamily="@font/ir_sans"
         android:text="@string/editButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,6 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tutorialButton"
+        android:fontFamily="@font/ir_sans"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editButton"
@@ -48,6 +52,7 @@
 
     <Button
         android:id="@+id/aboutButton"
+        android:fontFamily="@font/ir_sans"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/aboutButton"

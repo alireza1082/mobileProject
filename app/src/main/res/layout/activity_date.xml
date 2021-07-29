@@ -15,7 +15,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:text="@string/createDateTitle"
-        android:textSize="24sp"
+        android:fontFamily="@font/ir_sans"
+        android:textSize="20sp"
         android:layout_marginTop="10dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
