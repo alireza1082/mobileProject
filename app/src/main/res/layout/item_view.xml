@@ -24,6 +24,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="@string/textName"
+                android:textColor="@color/purple_200"
                 android:fontFamily="@font/ir_sans"
                 android:layout_weight="1"
                 android:textSize="24sp" />
@@ -35,6 +36,7 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:text="@string/textCost"
+                android:textColor="@color/purple_200"
                 android:fontFamily="@font/ir_sans"
                 android:textSize="24sp" />
         </LinearLayout>
@@ -52,8 +54,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
+                android:textColor="@color/purple_200"
                 android:fontFamily="@font/ir_sans"
                 android:gravity="center"
+                android:textColorHint="@color/purple_200"
                 android:inputType="textPersonName"
                 android:hint="@string/editTextPersonNameDate"/>
 
@@ -63,6 +67,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
+                android:textColorHint="@color/purple_200"
+                android:textColor="@color/purple_200"
                 android:fontFamily="@font/ir_sans"
                 android:gravity="center"
                 android:inputType="number"
