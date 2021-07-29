@@ -82,7 +82,8 @@ public class DateActivity extends AppCompatActivity implements AdapterView.DataC
     }
 
     public Boolean setMinusButton(View view){
-        userList.remove(userList.size() - 1);
+        if (userList.size() > 2)
+            userList.remove(userList.size() - 1);
         adapterView.notifyDataSetChanged();
         return false;
     }
