@@ -8,7 +8,7 @@
     tools:context=".editDateActivity">
 
     <TextView
-        android:id="@+id/valueText"
+        android:id="@+id/IDText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
@@ -21,7 +21,7 @@
         android:layout_marginTop="80dp"/>
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextTextIDName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -30,18 +30,18 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/valueText"
+        app:layout_constraintTop_toBottomOf="@id/IDText"
         android:layout_marginTop="50dp"/>
 
     <Button
-        android:id="@+id/searchButton"
+        android:id="@+id/editButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/edit"
         android:fontFamily="@font/ir_sans"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextTextPersonName"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextIDName"
         android:layout_marginTop="100dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
