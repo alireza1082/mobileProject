@@ -65,7 +65,7 @@ public class DateActivity extends AppCompatActivity implements AdapterView.DataC
 //
 //                adapterView.notifyDataSetChanged();
 //                startActivity(new Intent());
-//setUser();
+//                setUser();
                 Log.e("TAG", "onMenuItemClick: "+users.get(0).getName());
                 return false;
             }

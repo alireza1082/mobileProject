@@ -20,7 +20,7 @@ import ir.sharif.mobileproject.databinding.ItemViewBinding;
 public class AdapterView extends RecyclerView.Adapter<AdapterView.ViewHolder> {
 
     private static final String TAG = "AdapterView";
-private DataCallback dataCallback;
+    private DataCallback dataCallback;
 
     public AdapterView(DataCallback dataCallback) {
         this.dataCallback = dataCallback;
@@ -66,8 +66,6 @@ private DataCallback dataCallback;
             this.callback=cBack;
             nameUser = itemView.editTextPersonNameDate;
             costUser = itemView.editTextNumberDate;
-
-//
 
         }
 
