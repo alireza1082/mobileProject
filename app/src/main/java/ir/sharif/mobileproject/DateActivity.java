@@ -31,6 +31,7 @@ public class DateActivity extends AppCompatActivity implements AdapterView.DataC
     private ArrayList<User> users;
 
     private FloatingActionButton plusButton;
+    private FloatingActionButton minusButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,8 +52,9 @@ public class DateActivity extends AppCompatActivity implements AdapterView.DataC
         adapterView.notifyDataSetChanged();
 
         plusButton = findViewById(R.id.plusButton);
+        minusButton = findViewById(R.id.minusButton);
         plusButton.setOnClickListener(this::setPlusButton);
-        plusButton.setOnLongClickListener(this::setLongPlusButton);
+        minusButton.setOnClickListener(this::setMinusButton);
 
     }
 
@@ -79,7 +81,7 @@ public class DateActivity extends AppCompatActivity implements AdapterView.DataC
         adapterView.notifyDataSetChanged();
     }
 
-    public Boolean setLongPlusButton(View view){
+    public Boolean setMinusButton(View view){
         userList.remove(userList.size() - 1);
         adapterView.notifyDataSetChanged();
         return false;
