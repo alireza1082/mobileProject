@@ -1,7 +1,10 @@
 # mobileProject
 
-alireza rahmani 96105791
+Our project called "Gharar", is a great choice for going dutch!
+The base requirements of the project is developed by Android.
 
-mohammad saleh saeidi 96105842
 
-mohamamd azari 95105335
+Our Team:
+- Alireza Rahmani: 96105791
+- Mohammad Saleh Saeidi: 96105842
+- Mohamamd Azari: 95105335
